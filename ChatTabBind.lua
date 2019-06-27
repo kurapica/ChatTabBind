@@ -185,6 +185,7 @@ function ShowHelp()
     print("/chatbind label - Bind a frame to chat tab(auto-size)")
     print("/chatbind label autoscale - Bind a frame to chat tab(auto-scale)")
     print("/chatbind label keepsize - Bind a frame to chat tab(with scroll control)")
+    print("/chatbindopt keyswitch on/off - toggle the key switch")
     print("--=======================--")
 end
 
@@ -284,6 +285,7 @@ function FCF_OpenTemporaryWindow()
         tab:HookScript("OnMouseWheel", FCF_Tab_OnMouseWheel)
         tab:HookScript("OnEnter", FCF_Tab_OnEnter)
         tab:HookScript("OnKeyDown", FCF_Tab_OnKeyDown)
+        tab:EnableKeyboard(false)
 
         _LoadedTab = _LoadedTab + 1
     end

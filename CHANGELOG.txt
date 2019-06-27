@@ -1,0 +1,46 @@
+2018/03/28 v015
+	1. Update for New PLoop & Scorpio
+
+2018/02/10 v014
+	1. No tab bind in combat, fix error when enter the world within combat.
+
+2018/02/02 v013
+	1. Fix for EskaQuestTracker
+
+2018/01/10 v012
+	1. '/chatbindopt keyswitch on/off' added, default on. You can toggle the chat tab just by pressing the first char of the tab's label, like press "M" for "Map", also can only use "M" to toggle between "Map" or "Message".
+
+2018/01/10 v011
+	1. Fix the last selected tab.
+
+2018/01/02 v010
+	1. The ChatTabBind will remember the last selected tab when you quit, and toggle to that tab when you enter the game.
+
+2017/12/15 v009
+	1. Trigger the ebfm to start lock on player when unbind.
+
+2017/12/13 v008
+	1. Fix taint for add EskaQuestTracker inside.
+
+2017/12/13 v007
+	1. Add support for EskaQuestTracker.
+
+2017/12/01 v006
+	1. Improve the Scrollbar's auto fade.
+	2. Fix the fade alpha of the chat frame.
+
+2017/11/29 v005
+	1. Add mouse wheel support to the chat tabs, so you can toggle them just by mouse wheel.
+
+2017/11/28 v004
+	1. Add support for ObjectiveTrackerFrame in the SpecialFrameFix.lua, please use --keepsize option for it.
+	2. Add mouse wheel support for the scroll form and the scroll bars.
+
+2017/11/22 v003
+	1. /chatbind label [autoscale|keepsize], two options are added, if ommit, the binding frame wil take full size of the chat frame, if "autoscale", the frame will auto scale to keep the width/height ratio, if "keepsize" the frame will be contained in a scroll form.
+
+2017/11/20 v002
+	1. The fix is using regex pattern for the frame's name, so any window of the Skada will share the same fix. So for other addons.
+
+2017/11/19 v001
+	1. Finish the first version.

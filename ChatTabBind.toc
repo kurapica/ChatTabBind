@@ -1,0 +1,16 @@
+## Interface: 80200
+## Title: ChatTabBind
+## Author: kurapica125@outlook.com
+## Version: v018
+## Notes: Create new chat tab and bind other frame on it, like Skada or others.
+## Dependencies: Scorpio
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: ChatTabBind_DB
+
+# Core
+ChatTabBind.lua
+Definition.lua
+
+#Fix for special frames
+SpecialFrameFix.lua

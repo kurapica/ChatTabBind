@@ -1,3 +1,6 @@
+2019/08/26 v020
+	1. Add support to Details! Damage Meter, you need scroll to parent whose name like DetailsBaseFrame1, DetailsBaseFram2 and etc.
+
 2019/06/27 v019
 	1. Fix the frame capture the key press when entering the game, so you can't do anything.
 

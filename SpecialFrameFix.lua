@@ -87,7 +87,6 @@ end
 
 -- For EskaTracker
 SpecialFrameFix["EskaTracker.*"] = function(frame, asbind, scrollForm, parent)
-        print("got EskaTracker")
     if IsAddOnLoaded("EskaTracker") then
         -- Fix for item bar
         if asbind then
@@ -98,6 +97,24 @@ SpecialFrameFix["EskaTracker.*"] = function(frame, asbind, scrollForm, parent)
             NoCombat(function()
                 parent:EnableMouse(true)
             end)
+        end
+    end
+end
+
+-- For Details
+SpecialFrameFix["DetailsBaseFrame%d"] = function(frame, asbind)
+    local index = tonumber(frame:GetName():match("%d+$"))
+    if asbind then
+        frame:SetPoint("TOPLEFT", 0, - 16)
+    end
+    if index then
+        local rowframe = _G["DetailsRowFrame" .. index]
+        if rowframe then
+            if asbind then
+                rowframe:SetParent(frame)
+            else
+                rowframe:SetParent(UIParent)
+            end
         end
     end
 end

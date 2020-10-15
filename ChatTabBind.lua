@@ -24,7 +24,7 @@ local _ChooseFrame
 local _MouseFocusInitFrame
 local _MouseFocusFrame
 
-local _Mask = CreateFrame("Button")
+local _Mask = CreateFrame("Button", nil, UIParent, "BackdropTemplate")
 _Mask:Hide()
 _Mask:SetToplevel(true)
 _Mask:SetFrameStrata("TOOLTIP")

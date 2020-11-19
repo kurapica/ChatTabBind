@@ -40,6 +40,9 @@ end
 local ObjectiveTrackerFrameContainer
 SpecialFrameFix["ObjectiveTrackerFrame"] = function(frame, asbind, scrollForm)
     if asbind then
+        frame:SetMovable(true)
+        frame:SetResizable(true)
+        frame:SetUserPlaced(true)
         if scrollForm then
             ObjectiveTrackerFrameContainer = ObjectiveTrackerFrameContainer or CreateFrame("Frame")
             ObjectiveTrackerFrameContainer:SetHeight(frame:GetHeight())

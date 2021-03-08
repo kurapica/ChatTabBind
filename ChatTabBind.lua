@@ -90,8 +90,10 @@ function OnQuit(self)
     _SVDB.LastSelectedTab = _G.SELECTED_CHAT_FRAME.name
 
     for k, m in pairs(FrameMap) do
-        _SVDB.LabelMap[k:GetName()] = m.Label
-        _SVDB.LabelOpt[k:GetName()] = m.Option
+        k:SetParent(m.OriginalPar)
+
+        _SVDB.LabelMap[k:GetName(true)] = m.Label
+        _SVDB.LabelOpt[k:GetName(true)] = m.Option
 
         FCF_Close(m.ChatFrame)
     end
@@ -216,8 +218,10 @@ function PLAYER_ENTERING_WORLD(self)
         Delay(0.1)
 
         for k, v in pairs(map) do
-            if v and _G[k] and _G[k].GetName and _G[k]:GetName() == k and (not InCombatLockdown() or not _G[k]:IsProtected()) then
-                local ntab = BindFrameToChatFrame(_G[k], v, opt[k] or BindOption.AutoSize)
+            local frm = Scorpio.UI.UIObject.FromName(k)
+
+            if v and frm and (not InCombatLockdown() or not frm:IsProtected()) then
+                local ntab = BindFrameToChatFrame(frm, v, opt[k] or BindOption.AutoSize)
                 if v == _SVDB.LastSelectedTab then tab = ntab end
                 map[k] = nil
                 opt[k] = nil

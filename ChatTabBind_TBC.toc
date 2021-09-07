@@ -1,7 +1,7 @@
-## Interface: 20501
+## Interface: 20502
 ## Title: ChatTabBind
 ## Author: kurapica125@outlook.com
-## Version: v028
+## Version: @project-version@
 ## Notes: Create new chat tab and bind other frame on it, like Skada or others.
 ## Dependencies: Scorpio
 ## DefaultState: Enabled

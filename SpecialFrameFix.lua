@@ -45,14 +45,14 @@ SpecialFrameFix["ObjectiveTrackerFrame"] = function(frame, asbind, scrollForm)
         frame:SetUserPlaced(true)
         if scrollForm then
             ObjectiveTrackerFrameContainer = ObjectiveTrackerFrameContainer or CreateFrame("Frame")
-            ObjectiveTrackerFrameContainer:SetHeight(frame:GetHeight())
+            ObjectiveTrackerFrameContainer:SetHeight(frame:GetHeight() + 80)
             ObjectiveTrackerFrameContainer:SetWidth(frame:GetWidth() + 30)
             ObjectiveTrackerFrameContainer:Show()
             scrollForm:SetScrollChild(ObjectiveTrackerFrameContainer)
 
             frame:ClearAllPoints()
             frame:SetParent(ObjectiveTrackerFrameContainer)
-            frame:SetPoint("TOPLEFT", ObjectiveTrackerFrameContainer, "TOPLEFT", 30, 0)
+            frame:SetPoint("TOPLEFT", ObjectiveTrackerFrameContainer, "TOPLEFT", 30, -40)
             frame:SetPoint("BOTTOMRIGHT", ObjectiveTrackerFrameContainer, "BOTTOMRIGHT")
         else
             frame:SetPoint("TOPLEFT", 30, 0)

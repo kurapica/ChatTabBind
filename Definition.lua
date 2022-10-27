@@ -121,7 +121,7 @@ class "ChatFrameScrollForm" (function(_ENV)
 	-- Methods
 	-------------------------------------------
 	function SetScrollChild(self, frame)
-		self.ScrollFrame:SetScrollChild(frame)
+		self.ScrollFrame:SetScrollChild(frame or self.fakeScrollChild)
 		if frame then frame:SetParent(self.ScrollFrame) end
 	end
 
@@ -149,6 +149,9 @@ class "ChatFrameScrollForm" (function(_ENV)
 		scroll:SetScript("OnShow", Form_OnShow)
 		scroll:SetScript("OnScrollRangeChanged", Form_OnScrollRangeChanged)
 		scroll:SetScript("OnMouseWheel", Form_OnMouseWheel)
+
+		self.fakeScrollChild = CreateFrame("Frame", nil, scroll)
+		self.fakeScrollChild:Hide()
 
 		self.ScrollFrame = scroll
 

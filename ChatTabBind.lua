@@ -163,6 +163,7 @@ function ChooseFrame(msg)
                     _Mask:SetParent(frame)
                     _Mask:SetAllPoints(frame)
                     _Mask:Show()
+                    Next()
                     ShowGameTooltip()
                 end
             end
